@@ -1,6 +1,6 @@
-package ecad.wire;
+package wire;
 
-import Wire.Wires;
+import wire.Wires;
 import java.util.ArrayList;
 /**
 * 配線を管理するクラスです。
@@ -37,6 +37,6 @@ public class Wiring{
 * @param posEndY 配線の終点のY座標値です。
 */
 	public void addWire(int id,int posStartX,int posStartY,int posEndX,int posEndY){
-		wires.get(id).addWire(id,posStartX,posStartY,posEndX,posEndY);
+		wires.get(id).addWire(posStartX,posStartY,posEndX,posEndY);
 	}
 }
