@@ -19,6 +19,12 @@ javadoc -d doc -sourcepath src/	Wire src/ECAD.java
 echo "finish"
 }
 
+djar(){
+echo "jar"
+jar cvf ECAD.jar -C bin/ .
+echo "finish"
+}
+
 usage_exit() {
 	echo "aa"
 	# echo "Usage: $0 [-a] [-d dir] item ..."
@@ -39,6 +45,9 @@ do
   		;;
 	-c )
 	compile
+	;;
+	-j )
+	djar
 	;;
 	-r )
 	run

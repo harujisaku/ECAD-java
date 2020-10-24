@@ -1,4 +1,4 @@
-package Wire;
+package ecad.wire;
 class Wire {
-	public Wire(){}
+	public Wire(int ){}
 }
