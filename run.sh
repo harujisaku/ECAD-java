@@ -15,7 +15,7 @@ run(){
 doc(){
 echo "javadoc"
 rm -r doc
-javadoc -d doc -sourcepath src/	Wire src/ECAD.java
+javadoc -d doc -sourcepath src/	wire src/ECAD.java
 echo "finish"
 }
 

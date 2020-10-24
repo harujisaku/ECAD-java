@@ -1,4 +1,4 @@
-
+import wire.Wiring;
 /**
 * ECADのメインとなるクラスです。
 * @author haru jisaku
@@ -18,8 +18,8 @@ public class ECAD{
 		*/
 
 		System.out.println("HelloWorld");
-		// Wiring w=new Wiring();
-		// w.test();
+		Wiring w=new Wiring();
+		w.test();
 		a();
 	}
 	public void test(){
