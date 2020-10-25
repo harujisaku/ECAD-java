@@ -1,12 +1,14 @@
 package wire;
 
 import wire.Wire;
+import wire.WireGroup;
 import java.util.ArrayList;
-import collision.Collision;
 
 
 public class Wires {
 	ArrayList<Wire> wire = new ArrayList<Wire>();
+	ArrayList<ArrayList<Integer>> id = new ArrayList<ArrayList<Integer>>();
+	WireGroup wireGroup=new WireGroup(id,wire);
 	/**
 * 引数は必要ありません
 	*/
@@ -21,13 +23,11 @@ public class Wires {
 	public void addWire(int startPosX,int startPosY,int endPosX,int endPosY){
 		wire.add(new Wire(startPosX,startPosY,endPosX,endPosY));
 	}
+	/**
+	{@link WireGroup}でWireをグルーピングします。
+	*/
 
-	// public void groupingWire(){
-	// 	for (; ; ) {
-	//
-	// 	}
-	// 	// if (Collision.testLineLine()) {
-	//
-	// 	}
-	// }
+	public void groupingWire(){
+		wireGroup.groupingWire();
+	}
 }
