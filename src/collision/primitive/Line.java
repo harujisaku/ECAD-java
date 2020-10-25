@@ -16,7 +16,7 @@ public class Line{
 	@param endPosX 終点x座標
 	@param endPosY 終点y座標
 	*/
-	public Line(int startPosX,int startPosY,int endPosX,int endPosY){
+	protected Line(int startPosX,int startPosY,int endPosX,int endPosY){
 		this.startPosX=startPosX;
 		this.startPosY=startPosY;
 		this.endPosX=endPosX;

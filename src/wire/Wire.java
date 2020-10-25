@@ -39,4 +39,22 @@ public class Wire extends Line{
 		super.endPosX=posX>=0?posX:super.endPosX;
 		super.endPosY=posY>=0?posX:super.endPosY;
 	}
+/**
+Wireを移動します.
+始点を基準として絶対座標指定です。
+引数が0未満の場合値を変更しません。
+@param posX
+@param posY
+*/
+	public void moveWire(int posX,int posY){
+		super.endPosX=posX>=0?super.endPosX-super.startPosX+posX:super.endPosX;
+		super.endPosY=posY>=0?super.endPosY-super.startPosY+posY:super.endPosY;
+		super.startPosX=posX>=0?posX:super.startPosX;
+		super.startPosY=posY>=0?posY:super.startPosY;
+	}
+
+	public void relativeMoveWire(int posX,int posY){
+		super.startPosX+=posX;
+		super.startPosY+=posY;
+	}
 }

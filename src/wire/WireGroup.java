@@ -49,4 +49,32 @@ public class WireGroup{
 		}
 		return false;
 	}
+
+	public void reGroupingWire(){
+		id.clear();
+		for (int i=0,len=wire.size();i<len ;i++ ) {
+			ArrayList<Integer> a = new ArrayList<Integer>();
+			a.add(i);
+			id.add(a);
+		}
+		groupingWire();
+	}
+
+	public int getGroupId(int wireId){
+		for (int i=0,leni=id.size();i<leni ;i++ ) {
+			if (id.get(i).indexOf(wireId)!=-1) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	public int[] getWireIdForGroup(int groupId){
+		// Integer[] a = id.get(groupId).toArray(new Integer[0]);
+		int[] intArray = new int[id.get(groupId).size()];
+		for (int i=0; i<id.get(groupId).size(); i++) {
+			intArray[i] = id.get(groupId).get(i); // Integer
+		}
+		return intArray;
+	}
 }

@@ -8,11 +8,11 @@ public class ECAD{
 	/**
 	*クラスフィールドです.
 	*/
+	/**
+	* mainメソッドです.
+	*/
 	public static void main(String[] args) {
 
-		/**
-		* mainメソッドです.
-		*/
 	}
 	public void test(){
 		System.out.println("test");
