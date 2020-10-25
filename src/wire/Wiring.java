@@ -3,33 +3,35 @@ package wire;
 import wire.Wires;
 import java.util.ArrayList;
 /**
-* 配線を管理するクラスです。
+* 配線を管理するクラスです。.
+* 配線グループ自体の追加、削除、編集を担当します。
 * @author haru jisaku
 */
 public class Wiring{
-	/**
-	* クラスフィールドです
-	*/
 	ArrayList<Wires> wires = new ArrayList<Wires>();
+	/**
+	* コンストラクタに引数は必要ありません。
+	*/
 	public Wiring(){
 
 	}
 	/**
-	* testメソッドです
+	* testメソッドです.
 	* "Wiring"とprintします。
 	*/
 	public void test(){
 		System.out.println("Wiring");
 	}
 	/**
-	* addWiresメソッドです。
+	* addWiresメソッドです.
 	* wiresを追加します。
 	*/
 	public void addWires(){
 		wires.add(new Wires());
 	}
 /**
-* addWireメソッドです
+* addWireメソッドです.
+* 必ず一つの線分として表せる座標を入力してください。
 * @param id Wiresのid
 * @param startPosX 配線の始点のX座標値です。
 * @param startPosY 配線の始点のY座標値です。
