@@ -1,10 +1,24 @@
 package collision;
 import primitive.*;
 
+/**
+* 当たり判定のクラスです。
+@author haru jisaku
+*/
+
 
 public class Collision {
+	/**
+	クラスフィールドです
+	*/
 	public Collision(){}
 
+/**
+線分と線分の当たり判定です。
+@param l1 1つ目のlineです。
+@param l2 1つ目のlineです。
+@return l1とl2が接触していればtrueしていなければfalseを返します。
+*/
 	static public boolean testLineLine(Line l1,Line l2){
 		int ax=l1.startPosX, ay=l1.startPosY, bx=l1.endPosX, by=l1.endPosY;
 		int cx=l2.startPosX, cy=l2.startPosY, dx=l2.endPosX, dy=l2.endPosY;
