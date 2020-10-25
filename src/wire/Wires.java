@@ -4,7 +4,11 @@ import wire.Wire;
 import wire.WireGroup;
 import java.util.ArrayList;
 
-
+/**
+{@link Wire}を管理するクラスです.
+{@link WireGroup}とともにWireグループを形成します.
+@author haru jisaku
+*/
 public class Wires {
 	ArrayList<Wire> wire = new ArrayList<Wire>();
 	ArrayList<ArrayList<Integer>> id = new ArrayList<ArrayList<Integer>>();
@@ -14,7 +18,7 @@ public class Wires {
 	*/
 	public Wires(){};
 /**
-	* Wireを追加します。
+	* Wireを追加します.
 	@param startPosX 追加する{@link Wire}の始点x
 	@param startPosY 追加する{@link Wire}の始点y
 	@param endPosX 追加する{@link Wire}の終点x
@@ -24,7 +28,7 @@ public class Wires {
 		wire.add(new Wire(startPosX,startPosY,endPosX,endPosY));
 	}
 	/**
-	{@link WireGroup}でWireをグルーピングします。
+	{@link WireGroup}でWireをグルーピングします.
 	*/
 
 	public void groupingWire(){

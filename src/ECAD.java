@@ -1,32 +1,25 @@
 import wire.Wiring;
 /**
-* ECADのメインとなるクラスです。
+* ECADのメインとなるクラスです.
 * @author haru jisaku
 */
 
-public class ECAD{
-
+public class ECAD extends Test{
 	/**
-	*クラスフィールドです。
+	*クラスフィールドです.
 	*/
-
 	public static void main(String[] args) {
 
 		/**
-		* mainメソッドです。
-		* Wiringを使います。
+		* mainメソッドです.
 		*/
-
-		System.out.println("HelloWorld");
-		Wiring w=new Wiring();
-		w.test();
-		a();
 	}
 	public void test(){
 		System.out.println("test");
 	}
 
-	public static void a(){
+	public void a(){
 		System.out.println("dfsafdjflsajf");
 	}
+
 }

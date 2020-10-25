@@ -38,16 +38,16 @@ fi
 while [ "$1" != "" ]
 do
   case $1 in
-  	-d )
+  	d )
 	doc
   		;;
-	-c )
+	c )
 	compile
 	;;
-	-j )
+	j )
 	djar
 	;;
-	-r )
+	r )
 	run
   esac
   shift

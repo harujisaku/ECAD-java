@@ -3,7 +3,7 @@ import wire.Wire;
 import java.util.*;
 import collision.Collision;
 /**
-Wireを管理するグループのグループ化をするクラスです。
+Wireを管理するグループのグループ化をするクラスです.
 @author haru jisaku
 */
 public class WireGroup{
@@ -13,16 +13,16 @@ public class WireGroup{
 	ArrayList<ArrayList<Integer>> id;
 	ArrayList<Wire> wire;
 	/**
-	* IntegerのArrayListのArraiListとWireのArrayListが必要です。
-	@param id [[1,2],[3,4,5,6],[7]]のようにWireのidを保存します。
-	@param wire 座標を取得するために{@link Wire}のArrayListが必要です。
+	* IntegerのArrayListのArraiListとWireのArrayListが必要です.
+	@param id [[1,2],[3,4,5,6],[7]]のようにWireのidを保存します.
+	@param wire 座標を取得するために{@link Wire}のArrayListが必要です.
 	*/
 	public WireGroup(ArrayList<ArrayList<Integer>> id,ArrayList<Wire> wire){
 		this.id=id;
 		this.wire=wire;
 	}
 	/**
-	*{@link Wire}のグルーピングをします。接触している場合グループ化されます。
+	*{@link Wire}のグルーピングをします.接触している場合グループ化されます.
 	*/
 	public void groupingWire(){
 		while(groupingWireLoop()){}

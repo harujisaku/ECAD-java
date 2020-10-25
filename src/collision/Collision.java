@@ -2,7 +2,7 @@ package collision;
 import primitive.*;
 
 /**
-* 当たり判定のクラスです。
+* 当たり判定のクラスです.
 @author haru jisaku
 */
 
@@ -14,10 +14,10 @@ public class Collision {
 	public Collision(){}
 
 /**
-線分と線分の当たり判定です。
-@param l1 1つ目の{@linl Line}です。
-@param l2 1つ目のlineです。
-@return l1とl2が接触していればtrueしていなければfalseを返します。
+線分と線分の当たり判定です.
+@param l1 1つ目の{@linl Line}です.
+@param l2 1つ目のlineです.
+@return l1とl2が接触していればtrueしていなければfalseを返します.
 */
 	static public boolean testLineLine(Line l1,Line l2){
 		int ax=l1.startPosX, ay=l1.startPosY, bx=l1.endPosX, by=l1.endPosY;
@@ -32,10 +32,10 @@ public class Collision {
 		return false;
 	}
 	/**
-	矩形と点の当たり判定です。
-	@param r このRectにPointが接触しているかを判定します。
-	@param p このPointにRectが接触しているかを判定します。
-	@return rとpが接触していればtrueしていなければfalseを返します。
+	矩形と点の当たり判定です.
+	@param r このRectにPointが接触しているかを判定します.
+	@param p このPointにRectが接触しているかを判定します.
+	@return rとpが接触していればtrueしていなければfalseを返します.
 	*/
 	public static boolean testRectPoint(Rect r,Point p){
 		int ax=r.startPosX,ay=r.startPosY,bx=r.endPosX,by=r.endPosY,cx=p.posX,cy=p.posY;
@@ -45,11 +45,11 @@ public class Collision {
 		return false;
 	}
 /**
-* 矩形と座標一箇所の当たり判定です。
-@param r このRectに指定した座標が接触しているかを判定します。
-@param cx この座標とRectが接触しているかを判断します。
-@param cy この座標とRectが接触しているかを判断します。
-@return rとcx,cyで表される座標が接触していればtrueしていなければfalseを返します。
+* 矩形と座標一箇所の当たり判定です.
+@param r このRectに指定した座標が接触しているかを判定します.
+@param cx この座標とRectが接触しているかを判断します.
+@param cy この座標とRectが接触しているかを判断します.
+@return rとcx,cyで表される座標が接触していればtrueしていなければfalseを返します.
 */
 	public static boolean testRectPoint(Rect r,int cx,int cy){
 		int ax=r.startPosX,ay=r.startPosY,bx=r.endPosX,by=r.endPosY;

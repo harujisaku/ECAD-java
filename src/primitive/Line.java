@@ -1,6 +1,6 @@
 package primitive;
 /**
-* 基本プリミティブの線分です。
+* 線分の基本プリミティブです.
 @author haru jisaku
 */
 
@@ -10,7 +10,7 @@ public class Line{
 	*/
 	public int startPosX,startPosY,endPosX,endPosY;
 	/**
-	初期化時に始点、終点を必要とします。
+	初期化時に始点、終点を必要とします.
 	@param startPosX 始点x座標
 	@param startPosY 始点y座標
 	@param endPosX 終点x座標

@@ -1,7 +1,7 @@
 package wire;
 import primitive.*;
 /**
-線を管理するクラスです。.
+線を管理するクラスです..
 @author haru jisaku
 */
 public class Wire extends Line{
@@ -16,8 +16,8 @@ public class Wire extends Line{
 	}
 
 /**
-*Wireの始点座標を変更します。.
-* Wireの始点座標を変更しますが、引数が0未満の場合値を変更しません。
+*Wireの始点座標を変更します..
+* Wireの始点座標を変更しますが、引数が0未満の場合値を変更しません.
 @param posX 変更する始点のx座標
 @param posY 変更する始点のy座標
 */
@@ -29,8 +29,8 @@ public class Wire extends Line{
 
 
 	/**
-	*Wireの終点座標を変更します。.
-	* Wireの終点座標を変更しますが、引数が0未満の場合値を変更しません。
+	*Wireの終点座標を変更します..
+	* Wireの終点座標を変更しますが、引数が0未満の場合値を変更しません.
 	@param posX 変更する終点のx座標
 	@param posY 変更する終点のy座標
 	*/
