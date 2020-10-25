@@ -15,7 +15,7 @@ run(){
 doc(){
 echo "javadoc"
 rm -r doc
-javadoc -d doc -sourcepath src/	wire src/ECAD.java
+javadoc -d doc -sourcepath src/	wire primitive src/ECAD.java
 echo "finish"
 }
 
@@ -27,14 +27,12 @@ echo "finish"
 
 usage_exit() {
 	echo "aa"
-	# echo "Usage: $0 [-a] [-d dir] item ..."
-	# exit 1
 }
 
 if [ $# = 0 ]; then
 	compile
 	run
-	exit 1
+	exit
 fi
 
 while [ "$1" != "" ]

@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"ECAD","h":"","u":""},{"l":"Wires","h":"","u":""},{"l":"Wiring","h":"","u":""},{"l":"すべてのクラス","h":"","u":"allclasses-index.html"}]
+typeSearchIndex = [{"l":"ECAD","h":"","u":""},{"l":"Line","h":"","u":""},{"l":"Point","h":"","u":""},{"l":"Rect","h":"","u":""},{"l":"Wires","h":"","u":""},{"l":"Wiring","h":"","u":""},{"l":"すべてのクラス","h":"","u":"allclasses-index.html"}]

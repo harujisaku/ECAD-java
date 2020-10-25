@@ -2,15 +2,21 @@ package wire;
 
 import wire.Wire;
 import java.util.ArrayList;
+import collision.Collision;
 
 
 public class Wires {
-	ArrayList<Wire> wire = new ArrayList<Wire>();
+	protected ArrayList<Wire> wire = new ArrayList<Wire>();
+
 	public Wires(){
 
 	};
 
-	public void addWire(int posStartX,int posStartY,int posEndX,int posEndY){
-		wire.add(new Wire(posStartX,posStartY,posEndX,posEndY));
+	public void addWire(int startPosX,int startPosY,int endPosX,int endPosY){
+		wire.add(new Wire(startPosX,startPosY,endPosX,endPosY));
+	}
+
+	public void groupingWire(){
+
 	}
 }

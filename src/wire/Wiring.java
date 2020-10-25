@@ -31,12 +31,12 @@ public class Wiring{
 /**
 * addWireメソッドです
 * @param id Wiresのid
-* @param posStartX 配線の始点のX座標値です。
-* @param posStartY 配線の始点のY座標値です。
-* @param posEndX 配線の終点のX座標値です。
-* @param posEndY 配線の終点のY座標値です。
+* @param startPosX 配線の始点のX座標値です。
+* @param startPosY 配線の始点のY座標値です。
+* @param endPosX 配線の終点のX座標値です。
+* @param endPosY 配線の終点のY座標値です。
 */
-	public void addWire(int id,int posStartX,int posStartY,int posEndX,int posEndY){
-		wires.get(id).addWire(posStartX,posStartY,posEndX,posEndY);
+	public void addWire(int id,int startPosX,int startPosY,int endPosX,int endPosY){
+		wires.get(id).addWire(startPosX,startPosY,endPosX,endPosY);
 	}
 }
