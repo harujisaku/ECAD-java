@@ -4,7 +4,7 @@ import wire.Wiring;
 * @author haru jisaku
 */
 
-public class ECAD extends Test{
+public class ECAD{
 	/**
 	*クラスフィールドです.
 	*/
