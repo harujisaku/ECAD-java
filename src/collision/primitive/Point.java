@@ -1,4 +1,4 @@
-package primitive;
+package collision.primitive;
 /**
 点の基本プリミティブです.
 @author haru jisaku

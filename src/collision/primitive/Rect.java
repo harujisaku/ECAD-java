@@ -1,4 +1,4 @@
-package primitive;
+package collision.primitive;
 /**
 矩形の基本プリミティブです.
 @author haru jisaku

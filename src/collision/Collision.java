@@ -1,5 +1,5 @@
 package collision;
-import primitive.*;
+import collision.primitive.*;
 
 /**
 * 当たり判定のクラスです.

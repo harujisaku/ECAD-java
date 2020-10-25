@@ -1,5 +1,5 @@
 package wire;
-import primitive.*;
+import collision.primitive.*;
 /**
 線を管理するクラスです..
 @author haru jisaku

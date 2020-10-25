@@ -1,4 +1,4 @@
-package primitive;
+package collision.primitive;
 /**
 * 線分の基本プリミティブです.
 @author haru jisaku

@@ -15,7 +15,7 @@ run(){
 doc(){
 echo "javadoc"
 rm -r doc
-javadoc -d doc -sourcepath src/	wire primitive collision src/ECAD.java
+javadoc -d doc -sourcepath src/	wire collision collision.primitive src/ECAD.java
 echo "finish"
 }
 
@@ -38,16 +38,16 @@ fi
 while [ "$1" != "" ]
 do
   case $1 in
-  	d )
+  	*d* )
 	doc
   		;;
-	c )
+	*c* )
 	compile
 	;;
-	j )
+	*j* )
 	djar
 	;;
-	r )
+	*r* )
 	run
   esac
   shift
