@@ -1,15 +1,47 @@
 package harujisaku.parts;
 import harujisaku.collision.primitive.*;
-class Part extends Rect {
-	Part(int posX,int posY,int sizeX,int sizeY,int ofsetX,int ofsetY,String partPath,String partsGroup){
+public class Part extends Rect {
+	protected int direction,ofsetX,ofsetY;
+	protected String partPath,partsGroup;
+	public Part(int posX,int posY,int sizeX,int sizeY,int ofsetX,int ofsetY,String partPath,String partsGroup){
 		super(posX-ofsetX,posX-ofsetX+sizeX,posY-ofsetY,posY-ofsetY+sizeY);
 	}
 
-	Part(int posX,int posY,int sizeX,int sizeY,int ofsetX,int ofsetY,String partPath){
+	public Part(int posX,int posY,int sizeX,int sizeY,int ofsetX,int ofsetY,String partPath){
 		super(posX-ofsetX,posX-ofsetX+sizeX,posY-ofsetY,posY-ofsetY+sizeY);
 	}
 
-	Part(int posX,int posY,int sizeX,int sizeY,int ofsetX,int ofsetY,PartsImage partsImage){
+	public Part(int posX,int posY,int sizeX,int sizeY,int ofsetX,int ofsetY,PartsImage partsImage){
+		super(posX-ofsetX,posX-ofsetX+sizeX,posY-ofsetY,posY-ofsetY+sizeY);
+	}
+	public void movePart(int posX,int posY){
+		super.posX=posX?0>=posX:super.posX;
+		super.posY=posY?0>=posY:super.posY;
+	}
 
+	public void directionPart(int direction){
+		if (direction>=0&&direction<=3) {
+			this.direction=direction;
+		}
+	}
+
+	public void relativeMovePart(int posX,int posY){
+		super.posX+=posX;
+		super.posY+=posY;
+	}
+
+	public void setDirection(int direction){
+		if (direction>=0&&direction<=3) {
+			this.direction=direction;
+		}
+	}
+
+	public int getDirection(){
+		return direction;
+	}
+
+	public void ofsetBasedMovePart(int posX,int posY){
+		super.posX=posX?0>=posX-ofsetX:super.posX;
+		super.posY=posY?0>=posY-ofsetY:super.posY;
 	}
 }
