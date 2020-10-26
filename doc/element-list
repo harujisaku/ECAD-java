@@ -1,4 +1,6 @@
 名前のないパッケージ
-collision
-collision.primitive
-wire
+harujisaku
+harujisaku.collision
+harujisaku.collision.primitive
+harujisaku.parts
+harujisaku.wire
