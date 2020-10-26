@@ -23,11 +23,11 @@ public class WireGroup{
 	}
 	/**
 	*{@link Wire}のグルーピングをします.接触している場合グループ化されます.
+	内部で4重forループ+whileループがあります。連続して実行せずにWireの状態が変わったときなどの実行にとどめてください。
 	*/
 	public void groupingWire(){
 		while(groupingWireLoop()){}
 	}
-
 	private boolean groupingWireLoop(){
 		for (int i=0,len=id.size();i<len ;i++ ) {
 			ArrayList<Integer> a = new ArrayList<Integer>();
@@ -49,6 +49,11 @@ public class WireGroup{
 		}
 		return false;
 	}
+	/**
+	再グルーピングします.
+	移動したときなどすでに追加されているWireのグルーピングをやり直すときに使います。内部的に{@link WireGroup#groupingWire()}をループしているので時間がかかります。連続して実行せずにWireの移動時などに実行するにとどめてください。<br>
+	Wireを追加するときには{@link WireGroup#groupingWire()}を呼び出してください。また今後自動で呼び出されるようになる可能性があります。
+	*/
 
 	public void reGroupingWire(){
 		id.clear();
@@ -60,6 +65,12 @@ public class WireGroup{
 		groupingWire();
 	}
 
+	/**
+	wireIdからgroupIdを検索します.
+	内部的にループがかかっているので連続実行しないでください。
+	@param wireId 検索するWireのId
+	@return 検索して見つかったgroupIdが返されます。見つからなかった場合は-1が返されます。
+	*/
 	public int getGroupId(int wireId){
 		for (int i=0,leni=id.size();i<leni ;i++ ) {
 			if (id.get(i).indexOf(wireId)!=-1) {
@@ -68,9 +79,12 @@ public class WireGroup{
 		}
 		return -1;
 	}
+/**
+groupIdからwireIdの配列を返します.
+@return wireIdの配列.順番はグループに入れられた順です。
 
+*/
 	public int[] getWireIdForGroup(int groupId){
-		// Integer[] a = id.get(groupId).toArray(new Integer[0]);
 		int[] intArray = new int[id.get(groupId).size()];
 		for (int i=0; i<id.get(groupId).size(); i++) {
 			intArray[i] = id.get(groupId).get(i); // Integer
