@@ -15,7 +15,7 @@ run(){
 doc(){
 echo "javadoc"
 rm -r doc
-javadoc -d doc -sourcepath src/	wire collision collision.primitive src/ECAD.java
+javadoc -d doc -author -version -sourcepath src/	wire collision collision.primitive src/ECAD.java
 echo "finish"
 }
 
