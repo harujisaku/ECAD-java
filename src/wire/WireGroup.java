@@ -81,7 +81,7 @@ public class WireGroup{
 	}
 /**
 groupIdからwireIdの配列を返します.
-@param groupId wireIdを返すWireのグループのidです。{@link WireGroup#getGroupId()}などでgroupIdを入手してください。
+@param groupId wireIdを返すWireのグループのidです。{@link WireGroup#getGroupId(int)}などでgroupIdを入手してください。
 @return wireIdの配列.順番はグループに入れられた順です。
 
 */
