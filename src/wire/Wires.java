@@ -58,4 +58,12 @@ wire.get(wireId).relativeMoveWire(posX,posY);
 	public int getGroupId(int wireId){
 		return wireGroup.getGroupId(wireId);
 	}
+
+	public void reGroupingWire(){
+		wireGroup.reGroupingWire();
+	}
+
+	public void removeWire(int id){
+		wire.remove(id);
+	}
 }

@@ -22,6 +22,7 @@ echo "finish"
 djar(){
 echo "jar"
 jar cvf ECAD.jar -C bin/ .
+jar uvfm ECAD.jar ECAD.mani
 echo "finish"
 }
 

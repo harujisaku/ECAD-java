@@ -29,6 +29,14 @@ public class Wiring{
 	public void addWires(){
 		wires.add(new Wires());
 	}
+
+	public void removeWires(int id){
+		wires.remove(id);
+	}
+
+	public void removeWire(int wiresId,int wireId){
+		wires.get(wiresId).removeWire(wireId);
+	}
 /**
 * addWireメソッドです.
 * 必ず一つの線分として表せる座標を入力してください.
@@ -75,6 +83,8 @@ Wiresを相対位置指定移動します.
 
 public int getGroupId(int wiresId,int wireId){
 	return wires.get(wiresId).getGroupId(wireId);
-}
-
+	}
+	public void reGroupingWire(int wiresId){
+		wires.get(wiresId).reGroupingWire();
+	}
 }
