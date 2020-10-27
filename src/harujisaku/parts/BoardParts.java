@@ -21,7 +21,7 @@ public class BoardParts{
 	}
 
 	public void movePart(int partsId,int partId,int posX,int posY){
-		parts.get(partsId).movePart(posX,posY);
+		parts.get(partsId).movePart(partId,posX,posY);
 	}
 
 	public void relativeMovePart(int partsId,int partId,int posX,int posY){
@@ -29,7 +29,7 @@ public class BoardParts{
 	}
 
 	public void directionPart(int partsId,int partId,int direction){
-		parts.get(partsId).directionPart(partId,ddirection);
+		parts.get(partsId).directionPart(partId,direction);
 	}
 
 	public int getDirection(int partsId,int partId){

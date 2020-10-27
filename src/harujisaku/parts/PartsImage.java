@@ -9,14 +9,18 @@ class PartsImage {
 		this.partsImage=partsImage;
 	}
 
-	PartsImage(BufferedImage partsImage,String imageGroup){
+	PartsImage(BufferedImage partsImage,String partsGroup){
 		this.partsImage=partsImage;
-		this.imageGroup=imageGroup;
+		this.partsGroup=partsGroup;
 	}
 
-	PartsImage(String imagePath,String imageGroup){
+	PartsImage(String imagePath,String partsGroup){
 		this.imagePath=imagePath;
-		this.imageGroup=imageGroup;
-		this.partsImage = ImageIo.read(imagePath);
+		this.partsGroup=partsGroup;
+		try {
+			this.partsImage = ImageIO.read(new File(imagePath));
+		} catch(Exception e) {
+			System.err.println(e.getMessage());
+		}
 	}
 }

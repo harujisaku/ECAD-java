@@ -15,8 +15,8 @@ public class Part extends Rect {
 		super(posX-ofsetX,posX-ofsetX+sizeX,posY-ofsetY,posY-ofsetY+sizeY);
 	}
 	public void movePart(int posX,int posY){
-		super.posX=posX?0>=posX:super.posX;
-		super.posY=posY?0>=posY:super.posY;
+		super.startPosX=(posX<=0?posX:super.startPosX);
+		super.startPosY=(posY<=0?posY:super.startPosY);
 	}
 
 	public void directionPart(int direction){
@@ -26,8 +26,8 @@ public class Part extends Rect {
 	}
 
 	public void relativeMovePart(int posX,int posY){
-		super.posX+=posX;
-		super.posY+=posY;
+		super.startPosX+=posX;
+		super.startPosY+=posY;
 	}
 
 	public void setDirection(int direction){
@@ -41,7 +41,7 @@ public class Part extends Rect {
 	}
 
 	public void ofsetBasedMovePart(int posX,int posY){
-		super.posX=posX?0>=posX-ofsetX:super.posX;
-		super.posY=posY?0>=posY-ofsetY:super.posY;
+		super.startPosX=(posX<=0?posX-ofsetX:super.startPosX);
+		super.startPosY=(posY<=0?posY-ofsetY:super.startPosY);
 	}
 }

@@ -1,4 +1,5 @@
 import harujisaku.wire.Wiring;
+import harujisaku.parts.BoardParts;
 /**
 * ECADのメインとなるクラスです.
 * @author haru jisaku
