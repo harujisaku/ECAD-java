@@ -39,4 +39,8 @@ public class Parts {
 	public Part getPart(int partId){
 		return part.get(partId);
 	}
+
+	public int getPartLength(){
+		return part.size();
+	}
 }

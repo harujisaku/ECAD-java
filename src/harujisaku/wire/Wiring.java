@@ -110,4 +110,11 @@ public int getGroupId(int wiresId,int wireId){
 	public void reGroupingWire(int wiresId){
 		wires.get(wiresId).reGroupingWire();
 	}
+	public int getWiresLength(){
+		return wires.size();
+	}
+
+	public int[] getWirePos(int WiresId,int WireId){
+		return wires.get(WiresId).getWirePos(WireId);
+	}
 }

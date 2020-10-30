@@ -66,4 +66,13 @@ wire.get(wireId).relativeMoveWire(posX,posY);
 	public void removeWire(int id){
 		wire.remove(id);
 	}
+
+	public int[] getWirePos(int WireId){
+		int a[] = new int[4];
+		a[0]=wire.get(WireId).startPosX;
+		a[1]=wire.get(WireId).startPosY;
+		a[2]=wire.get(WireId).endPosX;
+		a[3]=wire.get(WireId).endPosY;
+		return a;
+	}
 }

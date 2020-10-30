@@ -2,7 +2,7 @@ package harujisaku.parts;
 import java.util.ArrayList;
 public class BoardParts{
 	ArrayList<Parts> parts = new ArrayList<Parts>();
-	BoardParts(){}
+	public BoardParts(){}
 
 	public void addParts(){
 		parts.add(new Parts());
@@ -13,7 +13,14 @@ public class BoardParts{
 	}
 
 	public void addPart(int partsId,int posX,int posY,int sizeX,int sizeY,int ofsetX,int ofsetY,String partPath,String partsGroup){
+		if (parts.size()>=partsId) {
+			parts.add(new Parts());
+		}
 		parts.get(partsId).addPart(posX,posY,sizeX,sizeY,ofsetX,ofsetY,partPath,partsGroup);
+	}
+
+	public void addPart(String partsId,String posX,String posY,String sizeX,String sizeY,String ofsetX,String ofsetY,String partPath,String partsGroup){
+		addPart(Integer.parseInt(partsId),Integer.parseInt(posX),Integer.parseInt(posY),Integer.parseInt(sizeX),Integer.parseInt(sizeY),Integer.parseInt(ofsetX),Integer.parseInt(ofsetY),partPath,partsGroup);
 	}
 
 	public void removePart(int partsId,int partId){
@@ -42,5 +49,9 @@ public class BoardParts{
 
 	public Parts getParts(int partsId){
 		return parts.get(partsId);
+	}
+
+	public int getPartLength(int partsId){
+		return parts.get(partsId).getPartLength();
 	}
 }

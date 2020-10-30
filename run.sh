@@ -2,20 +2,20 @@
 
 compile(){
 	echo "compile"
-	javac -d bin/ -sourcepath src/ src/ECAD.java
+	javac -d bin/ -sourcepath src/ src/harujisaku/ECAD.java
 	echo "finish"
 }
 
 run(){
 	echo "run"
-	java -cp bin/ ECAD
+	java -cp bin/ harujisaku/ECAD
 	echo "finish"
 }
 
 doc(){
 echo "javadoc"
 rm -r doc
-javadoc -d doc -author -version -sourcepath src/ -subpackages harujisaku src/ECAD.java
+javadoc -d doc -author -version -sourcepath src/ -subpackages harujisaku src/harujisaku/ECAD.java
 echo "finish"
 }
 
