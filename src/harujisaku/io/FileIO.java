@@ -88,19 +88,26 @@ public class FileIO {
 			}
 			break;
 			case BOTTOM_LINE:
-
+			System.out.println("qうぇrちゅいおぱsdfghjkl");
+				data=str.split(",",-1);
+				System.out.println(data.length);
+				ecad.addWire("0",data[0],data[1],data[2],data[3]);
 			break;
 			case TOP_LINE:
-
+				data=str.split(",",-1);
+				ecad.addWire("1",data[0],data[1],data[2],data[3]);
 			break;
 			case BOTTOM_JUMP:
-
+				data=str.split(",",-1);
+				ecad.addWire("2",data[0],data[1],data[2],data[3]);
 			break;
 			case TOP_JUMP:
-
+				data=str.split(",",-1);
+				ecad.addWire("3",data[0],data[1],data[2],data[3]);
 			break;
 			case AREA:
-
+				data=str.split(",",-1);
+				ecad.addWire("4",data[0],data[1],data[2],data[3]);
 			break;
 			default:
 			System.out.println("error"+mode+"is not ECADs");

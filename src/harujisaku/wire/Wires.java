@@ -75,4 +75,11 @@ wire.get(wireId).relativeMoveWire(posX,posY);
 		a[3]=wire.get(WireId).endPosY;
 		return a;
 	}
+
+	public Wire getWire(int wireId){
+		return wire.get(wireId);
+	}
+	public int getWireLength(){
+		return wire.size();
+	}
 }

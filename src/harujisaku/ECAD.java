@@ -1,6 +1,10 @@
 package harujisaku;
 import harujisaku.wire.Wiring;
+import harujisaku.wire.Wire;
+import harujisaku.wire.Wires;
 import harujisaku.parts.BoardParts;
+import harujisaku.parts.Parts;
+import harujisaku.parts.Part;
 import harujisaku.io.FileIO;
 /**
 * ECADのメインとなるクラスです.
@@ -42,6 +46,10 @@ public class ECAD{
 	@param endPosY 終点y座標
 	*/
 	public void addWire(int wiresId,int startPosX,int startPosY,int endPosX,int endPosY){
+		wiring.addWire(wiresId,startPosX,startPosY,endPosX,endPosY);
+	}
+
+	public void addWire(String wiresId,String startPosX,String startPosY,String endPosX,String endPosY){
 		wiring.addWire(wiresId,startPosX,startPosY,endPosX,endPosY);
 	}
 	/**
@@ -144,5 +152,29 @@ public class ECAD{
 
 	public int getPartLength(int partsId){
 		return parts.getPartLength(partsId);
+	}
+
+	public int getWireLength(int wiresId){
+		return wiring.getWireLength(wiresId);
+	}
+
+	public int getWiresLength(){
+		return wiring.getWiresLength();
+	}
+
+	public Parts getParts(int partsId){
+		return parts.getParts(partsId);
+	}
+
+	public Part getPart(int partsId,int partId){
+		return parts.getPart(partsId,partId);
+	}
+
+	public Wire getWire(int wiresId,int wireId){
+		return wiring.getWire(wiresId,wireId);
+	}
+
+	public Wires getWires(int wiresId){
+		return wiring.getWires(wiresId);
 	}
 }

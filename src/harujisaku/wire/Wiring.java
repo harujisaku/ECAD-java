@@ -55,7 +55,14 @@ public class Wiring{
 * @param endPosY 配線の終点のY座標値です.
 */
 	public void addWire(int id,int startPosX,int startPosY,int endPosX,int endPosY){
+		while (id>=wires.size()) {
+			wires.add(new Wires());
+		}
 		wires.get(id).addWire(startPosX,startPosY,endPosX,endPosY);
+	}
+
+	public void addWire(String id,String startPosX,String startPosY,String endPosX,String endPosY){
+		addWire(Integer.parseInt(id),Integer.parseInt(startPosX),Integer.parseInt(startPosY),Integer.parseInt(endPosX),Integer.parseInt(endPosY));
 	}
 /**
 {@link Wires#groupingWire}でグループ化します。
@@ -114,7 +121,19 @@ public int getGroupId(int wiresId,int wireId){
 		return wires.size();
 	}
 
+	public int getWireLength(int wiresId){
+		return wires.get(wiresId).getWireLength();
+	}
+
 	public int[] getWirePos(int WiresId,int WireId){
 		return wires.get(WiresId).getWirePos(WireId);
+	}
+
+	public Wires getWires(int wiresId){
+		return wires.get(wiresId);
+	}
+
+	public Wire getWire(int wiresId,int wireId){
+		return wires.get(wiresId).getWire(wireId);
 	}
 }
