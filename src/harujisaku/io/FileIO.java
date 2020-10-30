@@ -88,7 +88,6 @@ public class FileIO {
 			}
 			break;
 			case BOTTOM_LINE:
-			System.out.println("qうぇrちゅいおぱsdfghjkl");
 				data=str.split(",",-1);
 				System.out.println(data.length);
 				ecad.addWire("0",data[0],data[1],data[2],data[3]);

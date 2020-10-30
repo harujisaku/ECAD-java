@@ -2,19 +2,20 @@ package harujisaku.parts;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
-class PartsImage {
+
+public class PartsImage {
 	BufferedImage partsImage;
 	String imagePath,partsGroup;
-	PartsImage(BufferedImage partsImage){
+	public PartsImage(BufferedImage partsImage){
 		this.partsImage=partsImage;
 	}
 
-	PartsImage(BufferedImage partsImage,String partsGroup){
+	public PartsImage(BufferedImage partsImage,String partsGroup){
 		this.partsImage=partsImage;
 		this.partsGroup=partsGroup;
 	}
 
-	PartsImage(String imagePath,String partsGroup){
+	public PartsImage(String imagePath,String partsGroup){
 		this.imagePath=imagePath;
 		this.partsGroup=partsGroup;
 		try {

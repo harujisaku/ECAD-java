@@ -43,4 +43,8 @@ public class Parts {
 	public int getPartLength(){
 		return part.size();
 	}
+
+	public String getPartPath(int partId){
+		return part.get(partId).getPartPath();
+	}
 }

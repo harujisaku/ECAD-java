@@ -44,4 +44,8 @@ public class Part extends Rect {
 		super.startPosX=(posX<=0?posX-ofsetX:super.startPosX);
 		super.startPosY=(posY<=0?posY-ofsetY:super.startPosY);
 	}
+
+	public String getPartPath(){
+		return partPath;
+	}
 }

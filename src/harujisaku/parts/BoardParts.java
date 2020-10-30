@@ -1,5 +1,6 @@
 package harujisaku.parts;
 import java.util.ArrayList;
+import java.io.File;
 public class BoardParts{
 	ArrayList<Parts> parts = new ArrayList<Parts>();
 	public BoardParts(){}
@@ -16,6 +17,7 @@ public class BoardParts{
 		if (parts.size()>=partsId) {
 			parts.add(new Parts());
 		}
+		partPath.replaceAll("\\",File.separator);
 		parts.get(partsId).addPart(posX,posY,sizeX,sizeY,ofsetX,ofsetY,partPath,partsGroup);
 	}
 
@@ -53,5 +55,9 @@ public class BoardParts{
 
 	public int getPartLength(int partsId){
 		return parts.get(partsId).getPartLength();
+	}
+
+	public String getPartPath(int partsId,int partId){
+		return parts.get(partsId).getPartPath(partId);
 	}
 }
