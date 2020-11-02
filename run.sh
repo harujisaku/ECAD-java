@@ -2,27 +2,27 @@
 
 compile(){
 	echo "compile"
-	javac -d bin/ -sourcepath src/ src/harujisaku/ECAD.java
+	javac -d bin/ -sourcepath src/ src/ecad/ECAD.java
 	echo "finish"
 }
 
 run(){
 	echo "run"
-	java -cp bin/ harujisaku/ECAD
+	java -cp bin/ ecad/ECAD
 	echo "finish"
 }
 
 doc(){
 echo "javadoc"
 rm -r doc
-javadoc -d doc -author -version -sourcepath src/ -subpackages harujisaku src/harujisaku/ECAD.java
+javadoc -d doc -author -version -sourcepath src/ -subpackages ecad src/ecad/ECAD.java
 echo "finish"
 }
 
 djar(){
 echo "jar"
-jar cvf ECAD.jar -C bin/ .
-jar uvfm ECAD.jar ECAD.mani
+jar cvf code/ECAD.jar -C bin/ .
+jar uvfm code/ECAD.jar  ECAD.mani
 echo "finish"
 }
 
@@ -38,10 +38,16 @@ fi
 
 while [ "$1" != "" ]
 do
-  case $1 in
+	case $1 in
+	*t*)
+	compile
+	djar
+	run
+	exit 0
+	;;
   	*d* )
 	doc
-  		;;
+		;;
 	*c* )
 	compile
 	;;
