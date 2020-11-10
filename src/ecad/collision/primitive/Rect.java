@@ -20,7 +20,7 @@ public class Rect {
 		this.startPosY=startPosY;
 		this.endPosX=endPosX;
 		this.endPosY=endPosY;
-		this.sizeX=startPosX-endPosX;
-		this.sizeY=startPosY-endPosY;
+		this.sizeX=endPosX-startPosX;
+		this.sizeY=endPosY-startPosY;
 	}
 }

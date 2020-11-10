@@ -53,7 +53,7 @@ public class Collision {
 */
 	public static boolean testRectPoint(Rect r,int cx,int cy){
 		int ax=r.startPosX,ay=r.startPosY,bx=r.endPosX,by=r.endPosY;
-		if(cx>=bx&&cx<=ax&&cy>=by&&cy<=ay){
+		if(cx<=bx&&cx>=ax&&cy<=by&&cy>=ay){
 			return true;
 		}
 		return false;

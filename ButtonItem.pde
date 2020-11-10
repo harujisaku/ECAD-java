@@ -1,22 +1,15 @@
-class ButtonItem{
-	int sizeX,sizeY,posX,posY;
+class ButtonItem extends Rect{
 	String text;
 	DefaultButton button;
 	ButtonItem(String text,DefaultButton button){
+		super(button.posX,button.posY,button.posX+button.sizeX,button.posY+button.sizeY);
 		this.button=button;
 		this.text=text;
-		this.sizeX=button.sizeX;
-		this.sizeY=button.sizeY;
-		this.posX=button.posX;
-		this.posY=button.posY;
 	}
 
 	ButtonItem(String text,int posX,int posY,int sizeX,int sizeY){
-		// super(text,posX,posY);
-		this.posX=posX;
-		this.posY=posY;
-		this.sizeX=sizeX;
-		this.sizeY=sizeY;
+		super(posX,posY,posX+sizeX,posY+sizeY);
+
 	}
 
 	void update(){
@@ -35,7 +28,11 @@ class ButtonItem{
 		fill(0);
 		stroke(0);
 		textAlign(LEFT,TOP);
-		text(text,posX+2,posY);
+		text(text,startPosX+2,startPosY);
 		popMatrix();
+	}
+
+	ButtonItem getParent(){
+		return this;
 	}
 }

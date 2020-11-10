@@ -2,7 +2,7 @@
 
 compile(){
 	echo "compile"
-	javac -d bin/ -sourcepath src/ src/ecad/ECAD.java
+	javac -d bin/ -encoding UTF-8 -sourcepath src/ src/ecad/ECAD.java
 	echo "finish"
 }
 
