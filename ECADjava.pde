@@ -1,17 +1,17 @@
-import ecad.ECAD;
-// import gui.*;
-ECAD e = new ECAD();
 Label l = new Label("text",0,0);
-DefaultButton button = new RectButton(10,10,100,20);
+RectButton button = new RectButton(10,10,100,20);
 Button b = new Button("ttttt",button);
+ECADPanel pane = new ECADPanel();
 void setup(){
 	size(200,200);
 	noSmooth();
-	e.main(null);
+	pane.addObject(b);
+	pane.addObject(l);
 }
 
 void draw(){
-	b.update();
+	background(255);
+	pane.update();
 }
 
 void mousePressed(){

@@ -2,7 +2,7 @@ class Button extends ButtonItem{
 	Rect rect;
 	Button(String text,DefaultButton button){
 		super(text,button);
-		rect = (Rect)getParent();
+		rect = getRect();
 	}
 
 	Button(String text,int posX,int posY,int sizeX,int sizeY){
@@ -10,6 +10,7 @@ class Button extends ButtonItem{
 	}
 
 	boolean isClick(int posX,int posY){
+		if(!drawFlg) return false;
 		return Collision.testRectPoint(rect,posX,posY);
 	}
 }

@@ -1,6 +1,6 @@
-class Label extends Object{
+class Label extends ECADObject{
 	String text;
-	int fontSize;
+	int fontSize=13;
 	color c=color(0);
 	Label(String text,int posX,int posY){
 		super(posX,posY);
@@ -21,10 +21,19 @@ class Label extends Object{
 	}
 
 	void update(){
+		if(!drawFlg) return;
 		pushMatrix();
 		textSize(fontSize);
 		fill(c);
 		text(text,posX,posY);
 		popMatrix();
+	}
+
+	void show(){
+		drawFlg=true;
+	}
+
+	void hide(){
+		drawFlg=false;
 	}
 }

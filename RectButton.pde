@@ -1,9 +1,9 @@
 class RectButton extends DefaultButton{
 	RectButton(int posX,int posY,int sizeX,int sizeY){
 		super(posX,posY,sizeX,sizeY);
-		super.backgroundColor = color(255);
-		super.accentColor = color(51,153,255);
-		super.fowardColor = color(255);
+		backgroundColor = color(255);
+		accentColor = color(51,153,255);
+		fowardColor = color(255);
 	}
 
 	@Override
