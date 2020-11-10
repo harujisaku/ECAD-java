@@ -1,15 +1,13 @@
 class ButtonItem extends ECADObject{
 	String text;
-	DefaultButton button;
-	Rect rect;
+	Theme button;
 	int sizeX,sizeY;
-	ButtonItem(String text,DefaultButton button){
-		super(button.posX,button.posY);
+	ButtonItem(String text,Theme button){
+		super(button.startPosX,button.startPosY);
 		this.sizeX=button.sizeX;
 		this.sizeY=button.sizeY;
 		this.button=button;
 		this.text=text;
-		rect = new Rect(posX,posY,posX+sizeX,posY+sizeY);
 	}
 
 	ButtonItem(String text,int posX,int posY,int sizeX,int sizeY){
@@ -17,7 +15,6 @@ class ButtonItem extends ECADObject{
 		this.sizeX=sizeX;
 		this.sizeY=sizeY;
 		this.text=text;
-		rect = new Rect(posX,posY,posX+sizeX,posY+sizeY);
 	}
 
 	void update(){
@@ -50,13 +47,14 @@ class ButtonItem extends ECADObject{
 	}
 
 	Rect getRect(){
-		return rect;
+		return (Rect)button;
 	}
-
+	@Override
 	void hide(){
 		drawFlg=false;
 	}
 
+	@Override
 	void show(){
 		drawFlg=true;
 	}

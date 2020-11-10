@@ -11,10 +11,10 @@ class RectButton extends DefaultButton{
 		pushMatrix();
 		fill(backgroundColor);
 		noStroke();
-		rect(posX,posY,sizeX,sizeY);
+		rect(startPosX,startPosY,sizeX,sizeY);
 		stroke(activFlg?accentColor:grayColor);
 		strokeWeight(2);
-		rect(posX+2,posY+2,sizeX-4,sizeY-4);
+		rect(startPosX+2,startPosY+2,sizeX-4,sizeY-4);
 		popMatrix();
 	}
 }

@@ -93,7 +93,7 @@ Wiresを相対位置指定移動します.
 	}
 	/**
 	グループごとに相対移動.
-	指定したグループに含まれるWire全てに相対位置指定移動をします。{@link getGroupId(int ,int)}などでgroupIdを入手してください
+	指定したグループに含まれるWire全てに相対位置指定移動をします。{@link Wiring#getGroupId(int ,int)}などでgroupIdを入手してください
 	@param wiresId 移動するWireの所属するWiresを指定します.
 	@param groupId 移動するWireの所属するグループ
 	@param posX 移動分X座標
@@ -106,6 +106,7 @@ Wiresを相対位置指定移動します.
 	グループidを返します。
 	@param wiresId 検索するWiresのid
 	@param wireId 検索するWireのId
+	@return グループID
 	*/
 public int getGroupId(int wiresId,int wireId){
 	return wires.get(wiresId).getGroupId(wireId);
@@ -113,6 +114,7 @@ public int getGroupId(int wiresId,int wireId){
 	/**
 	再グルーピングします.
 	内部的に4重forループ+whileループがあります。Wiresの状態が変わったときなどの実行にとどめてください。またWireを追加したときはreGroupingWireではなく{@link Wiring#groupingWire(int)}を実行してください。
+	@param wiresId 再グルーピングするwiresのid
 	*/
 	public void reGroupingWire(int wiresId){
 		wires.get(wiresId).reGroupingWire();

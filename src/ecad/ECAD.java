@@ -15,12 +15,8 @@ public class ECAD{
 	BoardParts parts = new BoardParts();
 	Wiring wiring = new Wiring();
 	FileIO file = new FileIO();
-	/**
-	*クラスフィールドです.
-	*/
-	/**
-	* mainメソッドです.
-	*/
+
+
 	public static void main(String[] args) {
 		System.out.println("start main");
 	}
@@ -65,6 +61,7 @@ public class ECAD{
 	/**
 	再グルーピングします.
 	内部的に4重forループ+whileループがあります。Wiresの状態が変わったときなどの実行にとどめてください。またWireを追加したときはreGroupingWireではなく{@link ECAD#groupingWire(int)}を実行してください。
+	@param wiresId 移動するwiresのid
 	*/
 	public void reGroupingWire(int wiresId){
 		wiring.reGroupingWire(wiresId);
@@ -80,13 +77,14 @@ public class ECAD{
 	グループidを返します。
 	@param wiresId 検索するWiresのid
 	@param wireId 検索するWireのId
+	@return wireが所属するグループID
 	*/
 	public int getGroupId(int wiresId,int wireId){
 		return wiring.getGroupId(wiresId,wireId);
 	}
 	/**
 	グループごとに相対移動.
-	指定したグループに含まれるWire全てに相対位置指定移動をします	。{@link getGroupId(int ,int)}などでgroupIdを入手してください
+	指定したグループに含まれるWire全てに相対位置指定移動をします	。{@link Wiring#getGroupId(int ,int)}などでgroupIdを入手してください
 	@param wiresId 移動するWireの所属するWiresを指定します.
 	@param groupId 移動するWireの所属するグループ
 	@param posX 移動分X座標

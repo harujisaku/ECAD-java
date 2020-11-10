@@ -15,7 +15,7 @@ run(){
 doc(){
 echo "javadoc"
 rm -r doc
-javadoc -d doc -author -version -sourcepath src/ -subpackages ecad src/ecad/ECAD.java
+javadoc -encoding UTF-8 -d doc -author -version -sourcepath src/:. -subpackages ecad src/ecad/ECAD.java build/source/ECADjava.java
 echo "finish"
 }
 

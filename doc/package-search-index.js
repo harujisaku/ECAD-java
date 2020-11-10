@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"ecad","h":"","u":""},{"l":"ecad.collision","h":"","u":""},{"l":"ecad.collision.primitive","h":"","u":""},{"l":"ecad.io","h":"","u":""},{"l":"ecad.parts","h":"","u":""},{"l":"ecad.wire","h":"","u":""},{"l":"すべてのパッケージ","h":"","u":"allpackages-index.html"}]

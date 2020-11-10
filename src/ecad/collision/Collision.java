@@ -15,7 +15,7 @@ public class Collision {
 
 /**
 線分と線分の当たり判定です.
-@param l1 1つ目の{@linl Line}です.
+@param l1 1つ目のLineです.
 @param l2 1つ目のlineです.
 @return l1とl2が接触していればtrueしていなければfalseを返します.
 */
