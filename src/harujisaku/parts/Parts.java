@@ -1,7 +1,8 @@
 package harujisaku.parts;
 import java.util.ArrayList;
+import java.util.List;
 public class Parts {
-	ArrayList<Part> part = new ArrayList<Part>();
+	List<Part> part = new ArrayList<Part>();
 	Parts(){}
 
 	public void addPart(int posX,int posY,int sizeX,int sizeY,int ofsetX,int ofsetY,String partPath,String partsGroup){
